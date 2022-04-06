@@ -1,11 +1,10 @@
 ﻿using System;
 namespace delegate_.Enums
 {
-    public class Role
+
+    enum Role
     {
-        public bool CheckRole()
-        {
-            bool result=
-        }
+        Admin=1, Member
     }
+
 }

@@ -66,7 +66,7 @@ namespace delegate_
                     {
                         Console.WriteLine("Enter the new book name: ");
                         string name1 = Console.ReadLine();
-                        library.AddBook(name1);
+                        library.AddBook();
                     }
                     else if (p==2)
                     {
