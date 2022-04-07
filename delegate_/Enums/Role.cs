@@ -2,7 +2,7 @@
 namespace delegate_.Enums
 {
 
-    enum Role
+    public enum Role
     {
         Admin=1, Member
     }

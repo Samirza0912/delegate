@@ -13,27 +13,22 @@ namespace delegate_.Models
         public string Name { get; set; }
         public string AuthorName { get; set; }
         public int PageCount { get; set; }
+        public bool IsDeleted { get; set; }
+
 
         public Book(string name, string authorname, int pagecount)
         {
             Name = name;
             AuthorName = authorname;
             PageCount = pagecount;
+            IsDeleted = false;
         }
 
         public Book()
         {
         }
 
-        public void IsDeleted()
-        {
-            bool result = false;
-            if (true)
-            {
 
-            }
-
-        }
         public void ShowInfo()
         {
             Console.WriteLine($"ID:{Id}/n Name:{Name}/n Author:{AuthorName}/n Pagecount:{PageCount}");

@@ -34,7 +34,11 @@ namespace delegate_
                 string authorname = Console.ReadLine();
 
                 books[i] = new Book(name, authorname, pagecount);
-                Library library = new Library();
+                Library library = new Library()
+                {
+                    
+                }
+
 
                 do
                 {
@@ -66,7 +70,7 @@ namespace delegate_
                     {
                         Console.WriteLine("Enter the new book name: ");
                         string name1 = Console.ReadLine();
-                        library.AddBook();
+                        library.AddBook(name1);
                     }
                     else if (p==2)
                     {

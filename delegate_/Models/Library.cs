@@ -21,13 +21,13 @@ namespace delegate_.Models
 
         public void AddBook(Book book1)
         {
-            if (books.Count==0)
+            if (books.Count == 0)
             {
                 throw new CapacityLimitException("Capacity is overloaded");
             }
             foreach (var item in books)
             {
-                if (item.IsDeleted == false && item.Name==book1.Name )
+                if (item.IsDeleted == false && item.Name == book1.Name)
                 {
                     throw new AlreadyExistsException("the book that you want to add is already exist");
                 }
@@ -39,8 +39,35 @@ namespace delegate_.Models
         }
         public void GetBookById(int? id)
         {
-            int? _Id = null;
-            id = _Id;
+            foreach (var item in books)
+            {
+                if (id == item.Id && item.IsDeleted == false && id != null)
+                {
+                    item.ShowInfo();
+                }
+            }
         }
-    }
+        public void GetAllBooks()
+        {
+            List<Book> book = new List<Book>();
+            foreach (var item in books)
+            {
+                book.Add(item);
+                books.Remove(item);
+
+            }
+
+        }
+        public void DeleteBookById(int? id)
+        {
+            foreach (var item in books)
+            {
+                if (id == item.Id && item.IsDeleted == false && id != null)
+                {
+                    item.IsDeleted = true;
+                }
+            }
+        }
+
+    }    
 }
